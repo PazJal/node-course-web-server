@@ -58,6 +58,16 @@ app.get(('/about') , (req, res) => {
   });
 });
 
+app.get('/projects' , (request, response) => {
+  //response.send('<h1>Hello Express!</h1>');
+
+  response.render('projects.hbs' , {
+    pageTitle: 'Projects Page',
+    
+    welcomeMessage: 'New Projects will be displayed here.'
+  });
+});
+
 // /bad 
 
 app.get('/bad' , (req, res) => {
